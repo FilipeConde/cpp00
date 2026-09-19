@@ -1,19 +1,22 @@
 #include <iostream>
 
 int main(int ac, char **av){
-    // writes single string input;
-    // writes sequence of strings from input;
-    // writes message if no input;
-    // should write in uppercase;
-    int count = 1;
+    
+    int i = 1;
+    int j = 0;
 
     if(ac == 1){
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << "\n";
     }
     if(ac > 1){
-        while(count < ac){
-            std::cout << av[count];
-            count++;
+        while(i < ac){
+            while(av[i][j]){
+                av[i][j] = std::toupper(av[i][j]);
+                j++;
+            }
+            std::cout << av[i];
+            j = 0;
+            i++;
         }
         std::cout << "\n";
     }
