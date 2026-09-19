@@ -1,10 +1,10 @@
-NAME = megaphone
-
+NAME = agenda
+FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
-FLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRCS = megaphone.cpp
-OBJS = $(SRCS:.cpp=.o)
+SRCS = main.cpp
+
+OBJS: $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
@@ -15,7 +15,7 @@ $(NAME): $(OBJS)
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf *.o
 
 fclean: clean
 	rm -rf $(NAME)
