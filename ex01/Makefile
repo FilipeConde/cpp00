@@ -1,10 +1,10 @@
-NAME = agenda
+NAME = Agenda
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
 
 SRCS = main.cpp
 
-OBJS: $(SRCS:.cpp=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
