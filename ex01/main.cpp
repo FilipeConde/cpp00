@@ -1,3 +1,5 @@
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 #include <iostream>
 
 int main(int ac, char **av){
@@ -8,3 +10,5 @@ int main(int ac, char **av){
     }
     return (0);
 }
+
+#endif
