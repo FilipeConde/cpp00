@@ -1,3 +1,7 @@
+
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
 #include <iostream>
 #include <string>
 
@@ -14,9 +18,9 @@ public:
     //                          std::string surname,
     //                          std::string alias) const;
     int getIndex() const;
-    std::string getFirstName(int index) const;
-    std::string getSurname(int index) const;
-    std::string getAlias(int index) const;
+    std::string getFirstName() const;
+    std::string getSurname() const;
+    std::string getAlias() const;
 
 private:
     int _index;
@@ -24,3 +28,5 @@ private:
     std::string _surname;
     std::string _alias;
 };
+
+#endif
