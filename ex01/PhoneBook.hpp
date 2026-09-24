@@ -1,5 +1,7 @@
-#ifndef _IOSTREAM_
-# define _IOSTREAM_
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
+# include "Contact.hpp"
 
 class PhoneBook
 {
@@ -7,10 +9,10 @@ class PhoneBook
         PhoneBook();
         ~PhoneBook();
         
-        // Contact setContact();
+        Contact setContact();
 
     private:
-        // Contact _contact[8];
+        Contact _contactLst[8];
 };
 
 #endif

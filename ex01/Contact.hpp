@@ -8,19 +8,17 @@
 class Contact
 {
 public:
-    Contact(const int index,
-            const std::string fisrtName,
-            const std::string surname,
-            const std::string alias);
+    Contact();
+    Contact( int index,
+             std::string fisrtName,
+             std::string surname,
+             std::string alias);
     ~Contact();
-    // std::string printContact(int index,
-    //                          std::string firstName,
-    //                          std::string surname,
-    //                          std::string alias) const;
-    int getIndex() const;
-    std::string getFirstName() const;
-    std::string getSurname() const;
-    std::string getAlias() const;
+
+    int getIndex() ;
+    std::string getFirstName() ;
+    std::string getSurname() ;
+    std::string getAlias() ;
 
 private:
     int _index;
