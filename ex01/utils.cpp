@@ -22,7 +22,6 @@ std::string strToUpper(std::string &opt){
         result[i] = std::toupper(result[i]);
         i++;
     }
-    std::cout << result << std::endl;
     return (result);
 }
 
@@ -35,4 +34,5 @@ void    instructionMsg(){
     std::cout << "## EXIT   => quit program       ##" << std::endl;
     std::cout << "##           (=^.^=)            ##" << std::endl;
     std::cout << "##################################" << std::endl;
+    std::cout << std::endl;
 }
