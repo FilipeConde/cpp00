@@ -1,5 +1,3 @@
-// #ifndef PHONEBOOK_HPP
-// # define PHONEBOOK_HPP
 #include <iostream>
 #include "PhoneBook.hpp"
 
@@ -12,7 +10,12 @@ int main(int ac, char **av){
 
     PhoneBook phoneBook;
     std::cout << "PhoneBook Count: " << phoneBook.getCount() << std::endl;    
+    Contact a(0, "Ana", "Silva", "aninha");
+    Contact b(a);
+    Contact c;
+    c = a;
+
+    std::cout << b.getFirstName() << " " << c.getAlias() << std::endl;
+    
     return (0);
 }
-
-// #endif

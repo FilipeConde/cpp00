@@ -9,10 +9,15 @@ class Contact
 {
 public:
     Contact();
+
     Contact( int index,
             const std::string &firstName,
             const std::string &surname,
             const std::string &alias);
+
+    Contact(const Contact &other);
+    Contact &operator=(const Contact &other);
+    
     ~Contact();
 
     int getIndex() ;

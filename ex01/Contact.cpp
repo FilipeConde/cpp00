@@ -17,6 +17,22 @@ Contact::Contact(int index,
                     _alias = alias;
                 }
 
+Contact::Contact(const Contact &other)
+                : _index(other._index),
+                _firstName(other._firstName),
+                _surname(other._surname),
+                _alias(other._alias) {}
+
+Contact &Contact::operator=(const Contact &other){
+    if (this != &other){
+        _index = other._index;
+        _firstName = other._firstName;
+        _surname = other._surname;
+        _alias = other._alias;
+    }
+    return (*this);
+}
+
 Contact::~Contact() {}
 
 int Contact::getIndex() { return _index; }

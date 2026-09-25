@@ -9,9 +9,11 @@ public:
     PhoneBook();
     ~PhoneBook();
 
-    Contact addContact();
-    int getCount();
-    int getNext();
+    void    addContact(const std::string &firstName,
+                        const std::string &surname,
+                        const std::string &alias);
+    int     getCount();
+    int     getNext();
 
 private:
     Contact _contactLst[8];
