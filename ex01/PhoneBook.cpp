@@ -1,5 +1,5 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() {}
+PhoneBook::PhoneBook() : _count(0), _next(0) {}
 
 PhoneBook::~PhoneBook() {}

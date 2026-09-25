@@ -10,15 +10,15 @@ class Contact
 public:
     Contact();
     Contact( int index,
-             std::string fisrtName,
-             std::string surname,
-             std::string alias);
+            const std::string &firstName,
+            const std::string &surname,
+            const std::string &alias);
     ~Contact();
 
     int getIndex() ;
-    std::string getFirstName() ;
-    std::string getSurname() ;
-    std::string getAlias() ;
+    std::string getFirstName() const;
+    std::string getSurname() const;
+    std::string getAlias() const;
 
 private:
     int _index;

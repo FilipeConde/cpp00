@@ -13,6 +13,8 @@ class PhoneBook
 
     private:
         Contact _contactLst[8];
+        int     _count;
+        int     _next;
 };
 
 #endif
