@@ -4,7 +4,8 @@ CPP = c++
 
 SRCS = main.cpp \
 		PhoneBook.cpp \
-		Contact.cpp
+		Contact.cpp \
+		utils.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

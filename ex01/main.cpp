@@ -1,5 +1,6 @@
 #include <iostream>
 #include "PhoneBook.hpp"
+#include "utils.hpp"
 
 int main(int ac, char **av){
     (void)av;
@@ -9,10 +10,23 @@ int main(int ac, char **av){
     }
 
     PhoneBook   phoneBook;
-    int         count = 0;
-    // int         i = 0;
+    std::string opt;
+    // std::cout << "PhoneBook Count: " << phoneBook.getCount() << std::endl;
 
-    std::cout << "PhoneBook Count: " << phoneBook.getCount() << std::endl;    
+    while(1){
+        // std::cout << "##################################" << std::endl;
+        // std::cout << "######### My Phone Book ##########" << std::endl;
+        // std::cout << "## Enter an option:             ##" << std::endl;
+        // std::cout << "## ADD    => add contact        ##" << std::endl;
+        // std::cout << "## SEARCH => search for contact ##" << std::endl;
+        // std::cout << "## EXIT   => quit program       ##" << std::endl;
+        // std::cout << "##           (=^.^=)            ##" << std::endl;
+        // std::cout << "##################################" << std::endl;
+        instructionMsg();
+        std::cin >> opt;
+        std::cout << opt << std::endl;
+    }
+
     phoneBook.addContact("1", "Silva", "aninha");
     phoneBook.addContact("2", "Albuquerque", "Betão");
     phoneBook.addContact("3", "Santos", "Kaká");
@@ -23,7 +37,6 @@ int main(int ac, char **av){
     phoneBook.addContact("8", "Santos", "Kaká");
     phoneBook.addContact("9", "Mangual", "Pepeu");
     phoneBook.addContact("10", "Consuelo", "Mari");
-    count = phoneBook.getCount();
 
     phoneBook.printContactLst();
     
