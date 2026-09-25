@@ -2,7 +2,9 @@ NAME = Agenda
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
 
-SRCS = main.cpp
+SRCS = main.cpp \
+		PhoneBook.cpp \
+		Contact.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

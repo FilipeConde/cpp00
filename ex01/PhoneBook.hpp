@@ -5,16 +5,18 @@
 
 class PhoneBook
 {
-    public:
-        PhoneBook();
-        ~PhoneBook();
-        
-        Contact setContact();
+public:
+    PhoneBook();
+    ~PhoneBook();
 
-    private:
-        Contact _contactLst[8];
-        int     _count;
-        int     _next;
+    Contact addContact();
+    int getCount();
+    int getNext();
+
+private:
+    Contact _contactLst[8];
+    int _count;
+    int _next;
 };
 
 #endif
