@@ -22,6 +22,7 @@ int main(int ac, char **av){
     while(1){
         instructionMsg();
         std::cin >> opt;
+        opt = strToUpper(opt);
         // std::cout << opt << std::endl;
         switch (parseOption(opt))
         {
@@ -29,7 +30,6 @@ int main(int ac, char **av){
             std::cout << "Good bye!" << std::endl;
             exit(EXIT_SUCCESS);
             break;
-        
         default:
             break;
         }

@@ -14,6 +14,7 @@ enum Option
 
 void    instructionMsg();
 Option  parseOption(std::string &input);
+std::string strToUpper(std::string &opt);
 
 
 #endif
