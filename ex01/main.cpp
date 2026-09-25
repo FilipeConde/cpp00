@@ -26,6 +26,7 @@ int main(int ac, char **av)
         switch (parseOption(opt))
         {
             case ADD:
+                std::cout << "Enter the info with no special characters like \"ã\" or \"é\"..." << std::endl;
                 std::cout << "First name: ";
                 std::getline(std::cin, firstName);
                 std::cout << "Surname: ";
@@ -34,6 +35,9 @@ int main(int ac, char **av)
                 std::getline(std::cin, alias);
                 phoneBook.addContact(firstName, surname, alias);
                 std::cout << std::endl;
+                break;
+            case SEARCH:
+                phoneBook.searchContact();
                 break;
             case EXIT:
                 std::cout << "Good bye!" << std::endl;
@@ -46,7 +50,7 @@ int main(int ac, char **av)
                 std::cout << std::endl;
                 break;
         }
-        phoneBook.printContactLst();
+        // phoneBook.printContactLst();
     }
     return (EXIT_SUCCESS);
 }

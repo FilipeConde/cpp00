@@ -16,6 +16,7 @@ public:
     int             getNext();
     void            printContactLst();
     const   Contact &getContact(int index) const;
+    void            searchContact();
 
 private:
     Contact _contactLst[8];
