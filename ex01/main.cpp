@@ -1,6 +1,13 @@
 #include <iostream>
+#include <cstdlib>
 #include "PhoneBook.hpp"
 #include "utils.hpp"
+
+// enum options{
+//     ADD,
+//     SEARCH,
+//     EXIT
+// };
 
 int main(int ac, char **av){
     (void)av;
@@ -11,20 +18,21 @@ int main(int ac, char **av){
 
     PhoneBook   phoneBook;
     std::string opt;
-    // std::cout << "PhoneBook Count: " << phoneBook.getCount() << std::endl;
 
     while(1){
-        // std::cout << "##################################" << std::endl;
-        // std::cout << "######### My Phone Book ##########" << std::endl;
-        // std::cout << "## Enter an option:             ##" << std::endl;
-        // std::cout << "## ADD    => add contact        ##" << std::endl;
-        // std::cout << "## SEARCH => search for contact ##" << std::endl;
-        // std::cout << "## EXIT   => quit program       ##" << std::endl;
-        // std::cout << "##           (=^.^=)            ##" << std::endl;
-        // std::cout << "##################################" << std::endl;
         instructionMsg();
         std::cin >> opt;
-        std::cout << opt << std::endl;
+        // std::cout << opt << std::endl;
+        switch (parseOption(opt))
+        {
+        case EXIT:
+            std::cout << "Good bye!" << std::endl;
+            exit(EXIT_SUCCESS);
+            break;
+        
+        default:
+            break;
+        }
     }
 
     phoneBook.addContact("1", "Silva", "aninha");

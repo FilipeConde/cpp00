@@ -1,5 +1,16 @@
 #include "utils.hpp"
 
+Option parseOption(std::string &input)
+{
+    if (input == "ADD")
+        return ADD;
+    if (input == "SEARCH")
+        return SEARCH;
+    if (input == "EXIT")
+        return EXIT;
+    return INVALID;
+}
+
 void    instructionMsg(){
     std::cout << "##################################" << std::endl;
     std::cout << "######### My Phone Book ##########" << std::endl;
