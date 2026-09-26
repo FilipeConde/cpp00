@@ -9,9 +9,7 @@ public:
     PhoneBook();
     ~PhoneBook();
 
-    void            addContact(const std::string &firstName,
-                        const std::string &surname,
-                        const std::string &alias);
+    void            addContact();
     int             getCount();
     int             getNext();
     void            printContactLst();
@@ -22,6 +20,10 @@ private:
     Contact _contactLst[8];
     int _count;
     int _next;
+
+    void    setContact(const std::string &firstName,
+                        const std::string &surname,
+                        const std::string &alias);
 };
 
 #endif

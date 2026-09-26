@@ -10,13 +10,36 @@ int     PhoneBook::getCount() { return _count; }
 
 int     PhoneBook::getNext() { return _next; }
 
-void    PhoneBook::addContact(const std::string &firstName,
+void    PhoneBook::setContact(const std::string &firstName,
                             const std::string &surname,
                             const std::string &alias){
     _contactLst[_next] = Contact(_next, firstName, surname, alias);
     _next = (_next + 1) % 8;
     if (_count < 8)
         _count++;
+}
+
+void    PhoneBook::addContact(){
+    std::string firstName = "";
+    std::string surname = "";
+    std::string alias = "";
+
+    std::cout << "Write the info with no special characters\
+ like \"ã\" or \"é\"...\nDo not leave any field empty!\n" << std::endl;
+    while(firstName == ""){
+        std::cout << "First name: ";
+        std::getline(std::cin, firstName);
+    }
+    while(surname == ""){
+        std::cout << "Surname: ";
+        std::getline(std::cin, surname);
+    }
+    while(alias == ""){
+        std::cout << "Alias: ";
+        std::getline(std::cin, alias);
+    }
+    PhoneBook::setContact(firstName, surname, alias);
+    std::cout << std::endl;
 }
 
 const Contact   &PhoneBook::getContact(int index) const{
