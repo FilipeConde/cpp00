@@ -44,6 +44,14 @@ void    PhoneBook::addContact(){
         std::cout << "Alias: ";
         std::getline(std::cin, alias);
     }
+    while(phoneNbr == ""){
+        std::cout << "Phone number (just numbers with no space): ";
+        std::getline(std::cin, phoneNbr);
+    }
+    while(darkestSecret == ""){
+        std::cout << "Darkest secret: ";
+        std::getline(std::cin, darkestSecret);
+    }
     PhoneBook::setContact(firstName, surname, alias, phoneNbr, darkestSecret);
     std::cout << std::endl;
 }
@@ -100,7 +108,9 @@ void PhoneBook::searchContact()
     index = input[0] - '0';
     const Contact &contact = _contactLst[index];
     std::cout << "First name: " << contact.getFirstName() << std::endl;
-    std::cout << "Surname:    " << contact.getSurname() << std::endl;
-    std::cout << "Alias:      " << contact.getAlias() << std::endl;
+    std::cout << "Surname: " << contact.getSurname() << std::endl;
+    std::cout << "Alias: " << contact.getAlias() << std::endl;
+    std::cout << "Phone Number: " << contact.getPhoneNbr() << std::endl;
+    std::cout << "Darkest secret: " << contact.getDarkestSecret() << "\n" << std::endl;
     std::cout << std::endl;
 }
