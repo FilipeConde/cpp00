@@ -14,9 +14,6 @@ int main(int ac, char **av)
 
     PhoneBook phoneBook;
     std::string opt;
-    // std::string firstName = "";
-    // std::string surname = "";
-    // std::string alias = "";
 
     while (1)
     {

@@ -78,7 +78,7 @@ void PhoneBook::searchContact()
 
     if (_count == 0)
     {
-        std::cout << "PhoneBook is empty." << std::endl;
+        std::cout << "PhoneBook is empty.\n" << std::endl;
         return;
     }
 
