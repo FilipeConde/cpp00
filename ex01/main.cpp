@@ -21,6 +21,7 @@ int main(int ac, char **av)
     while (1)
     {
         instructionMsg();
+        opt = "";
         getline(std::cin, opt);
         opt = strToUpper(opt);
         switch (parseOption(opt))

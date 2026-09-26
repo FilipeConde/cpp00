@@ -1,6 +1,8 @@
 #include "PhoneBook.hpp"
-#include <iomanip>
 #include "utils.hpp"
+#include <iomanip>
+#include <iostream>
+#include <string>
 
 PhoneBook::~PhoneBook() {};
 
@@ -65,6 +67,32 @@ void PhoneBook::printContactLst()
     std::cout << std::endl;
 }
 
-void    PhoneBook::searchContact(){
+void PhoneBook::searchContact() 
+{
+    std::string input;
+    int         index;
+
+    if (_count == 0)
+    {
+        std::cout << "PhoneBook is empty." << std::endl;
+        return;
+    }
+
     printContactLst();
+    while (true)
+    {
+        std::cout << "Select the contact index to access: ";
+        if (!std::getline(std::cin, input))
+            return;
+        if (input.length() == 1 && input[0] >= '0' && input[0] < '0' + _count)
+            break;
+        std::cout << "Invalid index." << std::endl;
+    }
+
+    index = input[0] - '0';
+    const Contact &contact = _contactLst[index];
+    std::cout << "First name: " << contact.getFirstName() << std::endl;
+    std::cout << "Surname:    " << contact.getSurname() << std::endl;
+    std::cout << "Alias:      " << contact.getAlias() << std::endl;
+    std::cout << std::endl;
 }
