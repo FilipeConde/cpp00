@@ -14,9 +14,9 @@ int main(int ac, char **av)
 
     PhoneBook phoneBook;
     std::string opt;
-    std::string firstName;
-    std::string surname;
-    std::string alias;
+    std::string firstName = "";
+    std::string surname = "";
+    std::string alias = "";
 
     while (1)
     {
@@ -27,12 +27,18 @@ int main(int ac, char **av)
         {
             case ADD:
                 std::cout << "Enter the info with no special characters like \"ã\" or \"é\"..." << std::endl;
-                std::cout << "First name: ";
-                std::getline(std::cin, firstName);
-                std::cout << "Surname: ";
-                std::getline(std::cin, surname);
-                std::cout << "Alias: ";
-                std::getline(std::cin, alias);
+                while(firstName == ""){
+                    std::cout << "First name: ";
+                    std::getline(std::cin, firstName);
+                }
+                while(surname == ""){
+                    std::cout << "Surname: ";
+                    std::getline(std::cin, surname);
+                }
+                while(alias == ""){
+                    std::cout << "Alias: ";
+                    std::getline(std::cin, alias);
+                }
                 phoneBook.addContact(firstName, surname, alias);
                 std::cout << std::endl;
                 break;
