@@ -14,8 +14,10 @@ int     PhoneBook::getNext() { return _next; }
 
 void    PhoneBook::setContact(const std::string &firstName,
                             const std::string &surname,
-                            const std::string &alias){
-    _contactLst[_next] = Contact(_next, firstName, surname, alias);
+                            const std::string &alias,
+                            const std::string &phoneNbr,
+                            const std::string &darkestSecret){
+    _contactLst[_next] = Contact(_next, firstName, surname, alias, phoneNbr, darkestSecret);
     _next = (_next + 1) % 8;
     if (_count < 8)
         _count++;
@@ -25,6 +27,8 @@ void    PhoneBook::addContact(){
     std::string firstName = "";
     std::string surname = "";
     std::string alias = "";
+    std::string phoneNbr = "";
+    std::string darkestSecret = "";
 
     std::cout << "Write the info with no special characters\
  like \"ã\" or \"é\"...\nDo not leave any field empty!\n" << std::endl;
@@ -40,7 +44,7 @@ void    PhoneBook::addContact(){
         std::cout << "Alias: ";
         std::getline(std::cin, alias);
     }
-    PhoneBook::setContact(firstName, surname, alias);
+    PhoneBook::setContact(firstName, surname, alias, phoneNbr, darkestSecret);
     std::cout << std::endl;
 }
 

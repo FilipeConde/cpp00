@@ -23,7 +23,9 @@ private:
 
     void    setContact(const std::string &firstName,
                         const std::string &surname,
-                        const std::string &alias);
+                        const std::string &alias,
+                        const std::string &phoneNbr,
+                        const std::string &darkestSecret);
 };
 
 #endif
