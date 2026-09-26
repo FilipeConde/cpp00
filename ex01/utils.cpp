@@ -25,6 +25,18 @@ std::string strToUpper(std::string &opt){
     return (result);
 }
 
+std::string truncate(std::string str, size_t width, bool show_dot)
+{
+    if (str.length() > width){
+        if (show_dot){
+            return (str.substr(0, width - 1) + ".");
+        }   else{
+                return (str.substr(0, width));
+            }
+    }
+    return str;
+}
+
 void    instructionMsg(){
     std::cout << "##################################" << std::endl;
     std::cout << "######### My Phone Book ##########" << std::endl;

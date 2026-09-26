@@ -58,10 +58,14 @@ void PhoneBook::printContactLst()
 
     for (int i = 0; i < _count; i++)
     {
+        std::string firstName = _contactLst[i].getFirstName();
+        std::string surname = _contactLst[i].getSurname();
+        std::string alias = _contactLst[i].getAlias();
+
         std::cout << "|" << std::setw(10) << i
-                  << "|" << std::setw(10) << _contactLst[i].getFirstName()
-                  << "|" << std::setw(10) << _contactLst[i].getSurname()
-                  << "|" << std::setw(10) << _contactLst[i].getAlias()
+                  << "|" << std::setw(10) << truncate(firstName, 10, true)
+                  << "|" << std::setw(10) << truncate(surname, 10, true)
+                  << "|" << std::setw(10) << truncate(alias, 10, true)
                   << "|" << std::endl;
     }
     std::cout << std::endl;
